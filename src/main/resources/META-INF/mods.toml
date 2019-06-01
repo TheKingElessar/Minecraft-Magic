@@ -1,0 +1,27 @@
+modLoader="javafml"
+loaderVersion="[25,)"
+issueTrackerURL="https://purple.com"
+displayURL="https://;purple.com"
+authors="TheKingElessar"
+
+[[mods]]
+	modId="tutorialmod"
+	version="${file.jarVersion}"
+	displayName="Tutorial Mod"
+	description='''
+        Now this is epic.
+	'''
+
+	[[dependencies.tutorialmod]]
+	    modId="forge"
+	    mandatory=true
+	    versionRange="[25.0.108,)"
+	    ordering="NONE"
+	    side="BOTH"
+
+	[[dependencies.tutorialmod]]
+	    modId="minecraft"
+	    mandatory=true
+	    versionRange="[1.13.2]"
+	    ordering="NONE"
+	    side="BOTH"
