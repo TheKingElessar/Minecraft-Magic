@@ -1,25 +1,25 @@
 modLoader="javafml"
 loaderVersion="[25,)"
-issueTrackerURL="https://purple.com"
-displayURL="https://;purple.com"
+issueTrackerURL="https://github.com/TheKingElessar/Minecraft_Magic/issues"
+displayURL="https://github.com/TheKingElessar/Minecraft_Magic"
 authors="TheKingElessar"
 
 [[mods]]
-	modId="tutorialmod"
+	modId="minecraftmagic"
 	version="${file.jarVersion}"
-	displayName="Tutorial Mod"
+	displayName="Minecraft Magic"
 	description='''
-        Now this is epic.
+        Adds magic to Minecraft.
 	'''
 
-	[[dependencies.tutorialmod]]
+	[[dependencies.minecraftmagic]]
 	    modId="forge"
 	    mandatory=true
 	    versionRange="[25.0.108,)"
 	    ordering="NONE"
 	    side="BOTH"
 
-	[[dependencies.tutorialmod]]
+	[[dependencies.minecraftmagic]]
 	    modId="minecraft"
 	    mandatory=true
 	    versionRange="[1.13.2]"

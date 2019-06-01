@@ -1,4 +1,4 @@
-package com.thekingelessar.tutorialmod.itemgroup;
+package com.thekingelessar.minecraftmagic.itemgroup;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;

@@ -1,4 +1,4 @@
-package com.thekingelessar.tutorialmod.proxy;
+package com.thekingelessar.minecraftmagic.proxy;
 
 public class CommonProxy {
 

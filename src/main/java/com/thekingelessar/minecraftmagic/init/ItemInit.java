@@ -1,8 +1,8 @@
-package com.thekingelessar.tutorialmod.init;
+package com.thekingelessar.minecraftmagic.init;
 
-import com.thekingelessar.tutorialmod.TutorialMod;
-import com.thekingelessar.tutorialmod.item.Jesses;
-import com.thekingelessar.tutorialmod.item.ModItem;
+import com.thekingelessar.minecraftmagic.MinecraftMagic;
+import com.thekingelessar.minecraftmagic.item.Jesses;
+import com.thekingelessar.minecraftmagic.item.ModItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,10 +19,10 @@ public class ItemInit {
     @SubscribeEvent
     public static void register(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();
-        moditem.setRegistryName(TutorialMod.modid, "moditem");
+        moditem.setRegistryName(MinecraftMagic.modid, "moditem");
         registry.register(moditem);
 
-        jesses.setRegistryName(TutorialMod.modid, "jesses");
+        jesses.setRegistryName(MinecraftMagic.modid, "jesses");
         registry.register(jesses);
 
     }

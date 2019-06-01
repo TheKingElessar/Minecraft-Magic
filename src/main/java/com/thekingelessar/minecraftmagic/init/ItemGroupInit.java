@@ -1,6 +1,6 @@
-package com.thekingelessar.tutorialmod.init;
+package com.thekingelessar.minecraftmagic.init;
 
-import com.thekingelessar.tutorialmod.itemgroup.ModItemGroup;
+import com.thekingelessar.minecraftmagic.itemgroup.ModItemGroup;
 import net.minecraft.item.ItemStack;
 
 public class ItemGroupInit {

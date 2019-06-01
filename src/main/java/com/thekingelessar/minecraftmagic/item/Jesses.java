@@ -1,6 +1,6 @@
-package com.thekingelessar.tutorialmod.item;
+package com.thekingelessar.minecraftmagic.item;
 
-import com.thekingelessar.tutorialmod.init.ItemGroupInit;
+import com.thekingelessar.minecraftmagic.init.ItemGroupInit;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.item.Item;
