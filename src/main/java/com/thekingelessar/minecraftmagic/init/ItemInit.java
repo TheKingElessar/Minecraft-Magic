@@ -12,16 +12,15 @@ import net.minecraftforge.registries.IForgeRegistry;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ItemInit {
 
-    public static final ModItem moditem = new ModItem();
-    public static final Jesses jesses = new Jesses();
-
-
     @SubscribeEvent
     public static void register(RegistryEvent.Register<Item> event) {
         IForgeRegistry<Item> registry = event.getRegistry();
+
+        ModItem moditem = new ModItem();
         moditem.setRegistryName(MinecraftMagic.modid, "moditem");
         registry.register(moditem);
 
+        Jesses jesses = new Jesses();
         jesses.setRegistryName(MinecraftMagic.modid, "jesses");
         registry.register(jesses);
 
