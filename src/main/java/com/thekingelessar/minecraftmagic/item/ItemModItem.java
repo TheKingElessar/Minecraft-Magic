@@ -12,7 +12,7 @@ import net.minecraft.world.World;
 public class ModItem extends Item {
 
     public ModItem() {
-        super(new Properties().group(ItemGroupInit.falconryItemGroup));
+        super(new Properties().group(ItemGroupInit.modItemGroup));
     }
 
     @Override

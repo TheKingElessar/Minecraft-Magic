@@ -1,5 +1,8 @@
 package com.thekingelessar.minecraftmagic;
 
+import com.thekingelessar.minecraftmagic.network.MinecraftMagicPacketHandler;
+import com.thekingelessar.minecraftmagic.network.packets.PacketGlowSingleEntity;
+import com.thekingelessar.minecraftmagic.network.packets.PacketSummonEvokerFang;
 import com.thekingelessar.minecraftmagic.proxy.ClientProxy;
 import com.thekingelessar.minecraftmagic.proxy.CommonProxy;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -22,6 +25,23 @@ public class MinecraftMagic
     public MinecraftMagic() {
         FMLJavaModLoadingContext.get().getModEventBus().register(this);
         proxy.construct();
+
+        MinecraftMagicPacketHandler.INSTANCE.registerMessage(
+                MinecraftMagicPacketHandler.increaseId(),
+                PacketSummonEvokerFang.class,
+                PacketSummonEvokerFang::encode,
+                PacketSummonEvokerFang::decode,
+                PacketSummonEvokerFang.Handler::handle
+        );
+
+        MinecraftMagicPacketHandler.INSTANCE.registerMessage(
+                MinecraftMagicPacketHandler.increaseId(),
+                PacketGlowSingleEntity.class,
+                PacketGlowSingleEntity::encode,
+                PacketGlowSingleEntity::decode,
+                PacketGlowSingleEntity.Handler::handle
+        );
+
     }
 
     @SubscribeEvent
