@@ -1,6 +1,6 @@
-package com.thekingelessar.minecraftmagic.item;
+package com.thekingelessar.minecraftmagic.common.item;
 
-import com.thekingelessar.minecraftmagic.itemgroup.ItemGroupInit;
+import com.thekingelessar.minecraftmagic.common.itemgroup.ItemGroupInit;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
