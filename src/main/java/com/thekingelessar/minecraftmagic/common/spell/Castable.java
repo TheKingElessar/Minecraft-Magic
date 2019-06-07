@@ -1,12 +1,12 @@
-package com.thekingelessar.minecraftmagic.spell;
+package com.thekingelessar.minecraftmagic.common.spell;
 
-import com.thekingelessar.minecraftmagic.spell.target.ITarget;
+import com.thekingelessar.minecraftmagic.common.spell.target.ITarget;
 import net.minecraft.entity.Entity;
 
 public abstract class Castable {
 
-    public Entity caster;
-    public ITarget target;
+    protected Entity caster;
+    public ITarget target = null;
 
 
     public abstract void cast();

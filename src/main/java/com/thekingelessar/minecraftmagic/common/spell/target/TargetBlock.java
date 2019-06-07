@@ -1,4 +1,4 @@
-package com.thekingelessar.minecraftmagic.spell.target;
+package com.thekingelessar.minecraftmagic.common.spell.target;
 
 public class TargetBlock implements ITarget {
     public Double x;
