@@ -1,8 +1,8 @@
-package com.thekingelessar.minecraftmagic.register;
+package com.thekingelessar.minecraftmagic.common.register;
 
 import com.thekingelessar.minecraftmagic.MinecraftMagic;
 import com.thekingelessar.minecraftmagic.item.ItemModItem;
-import com.thekingelessar.minecraftmagic.item.spell.conjuration.ItemConjureFang;
+import com.thekingelessar.minecraftmagic.common.item.spell.conjuration.conjurefang.ItemConjureFang;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

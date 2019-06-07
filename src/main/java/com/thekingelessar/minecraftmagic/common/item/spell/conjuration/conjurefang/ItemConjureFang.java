@@ -1,7 +1,7 @@
-package com.thekingelessar.minecraftmagic.common.item.spell.conjuration;
+package com.thekingelessar.minecraftmagic.common.item.spell.conjuration.conjurefang;
 
 import com.thekingelessar.minecraftmagic.common.itemgroup.ItemGroupInit;
-import com.thekingelessar.minecraftmagic.common.spell.conjuration.SpellConjureFang;
+import com.thekingelessar.minecraftmagic.common.spell.conjuration.conjurefang.SpellConjureFang;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -22,22 +22,6 @@ public class ItemConjureFang extends Item {
             ItemStack itemstack = playerIn.getHeldItem(handIn); // Shield function
             playerIn.setActiveHand(handIn); // Shield function
 
- /*           int newCount = itemstack.getCount() - 1;
-//used if you want to decrease the item stack by one when used
-            if (handIn.equals(EnumHand.MAIN_HAND)) {
-                if(newCount == 0) {
-                    playerIn.setItemStackToSlot(EntityEquipmentSlot.MAINHAND, ItemStack.EMPTY);
-                } else {
-                    itemstack.setCount(newCount);
-                }
-            } else if (handIn.equals(EnumHand.OFF_HAND)) {
-                if(newCount == 0) {
-                    playerIn.setItemStackToSlot(EntityEquipmentSlot.OFFHAND, ItemStack.EMPTY);
-                } else {
-                    itemstack.setCount(newCount);
-                }
-            }
-*/
             return new ActionResult<>(EnumActionResult.SUCCESS, itemstack); // Shield function
 
         } else {

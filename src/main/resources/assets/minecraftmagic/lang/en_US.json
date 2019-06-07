@@ -1,5 +1,5 @@
 {
-  "itemGroup.Falconry": "Falconry",
-  "itemGroup.ModItemGroup": "Mod Item Group",
-  "item.minecraftmagic.moditem": "Mod Item"
+  "itemGroup.ModItemGroup": "Magic",
+  "item.minecraftmagic.moditem": "Test Item",
+  "item.minecraftmagic.conjurefang": "Spell Conjure Fang"
 }
