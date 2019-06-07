@@ -1,4 +1,4 @@
-package com.thekingelessar.minecraftmagic.network.packets;
+package com.thekingelessar.minecraftmagic.common.network.packets;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
