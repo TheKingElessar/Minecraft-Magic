@@ -1,7 +1,6 @@
 package com.thekingelessar.minecraftmagic.itemgroup;
 
 import com.thekingelessar.minecraftmagic.item.ModItems;
-import com.thekingelessar.minecraftmagic.itemgroup.ModItemGroup;
 
 public class ItemGroupInit {
 
