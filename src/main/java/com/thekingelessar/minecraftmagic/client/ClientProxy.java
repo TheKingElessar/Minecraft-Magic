@@ -1,17 +1,28 @@
-package com.thekingelessar.minecraftmagic.proxy;
+package com.thekingelessar.minecraftmagic.client;
 
-public class ClientProxy extends CommonProxy {
+import com.thekingelessar.minecraftmagic.common.ServerProxy;
+import net.minecraft.client.Minecraft;
+import net.minecraft.world.World;
 
-    public void construct() {
-        super.construct();
+public class ClientProxy extends ServerProxy {
+
+    public ClientProxy()
+    {
+
     }
 
-    public void setup() {
-        super.setup();
+    @Override
+    public void preInit()
+    {
+        super.preInit();
+
+        // Here you'd register stuff that only needs to be registered on the client side
     }
 
-    public void complete() {
-        super.complete();
+    @Override
+    public World getClientWorld()
+    {
+        return Minecraft.getInstance().world;
     }
 
 }
