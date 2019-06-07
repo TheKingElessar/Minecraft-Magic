@@ -1,4 +1,4 @@
-package com.thekingelessar.minecraftmagic.network;
+package com.thekingelessar.minecraftmagic.common.network;
 
 import com.thekingelessar.minecraftmagic.MinecraftMagic;
 import net.minecraft.util.ResourceLocation;

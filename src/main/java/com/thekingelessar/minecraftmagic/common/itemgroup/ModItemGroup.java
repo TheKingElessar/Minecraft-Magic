@@ -1,4 +1,4 @@
-package com.thekingelessar.minecraftmagic.itemgroup;
+package com.thekingelessar.minecraftmagic.common.itemgroup;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IItemProvider;
