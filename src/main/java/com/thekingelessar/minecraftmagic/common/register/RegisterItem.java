@@ -1,8 +1,9 @@
 package com.thekingelessar.minecraftmagic.common.register;
 
 import com.thekingelessar.minecraftmagic.MinecraftMagic;
-import com.thekingelessar.minecraftmagic.item.ItemModItem;
+import com.thekingelessar.minecraftmagic.common.item.ItemModItem;
 import com.thekingelessar.minecraftmagic.common.item.spell.conjuration.conjurefang.ItemConjureFang;
+import com.thekingelessar.minecraftmagic.common.item.spell.conjuration.conjurefang.ItemConjureFangRow;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -24,6 +25,9 @@ public class RegisterItems {
         conjurefang.setRegistryName(MinecraftMagic.modid, "conjurefang");
         registry.register(conjurefang);
 
+        ItemConjureFangRow conjurefangrow = new ItemConjureFangRow();
+        conjurefangrow.setRegistryName(MinecraftMagic.modid, "conjurefangrow");
+        registry.register(conjurefangrow);
 
     }
 
