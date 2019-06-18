@@ -5,19 +5,22 @@ import net.minecraft.util.IItemProvider;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class ModItemGroup extends net.minecraft.item.ItemGroup {
-
+public class ModItemGroup extends net.minecraft.item.ItemGroup
+{
+    
     private IItemProvider icon;
-
-    public ModItemGroup(String label, IItemProvider icon) {
+    
+    public ModItemGroup(String label, IItemProvider icon)
+    {
         super(label);
         this.icon = icon;
     }
-
-    @OnlyIn(Dist.CLIENT)
+    
+    @OnlyIn (Dist.CLIENT)
     @Override
-    public ItemStack createIcon() {
+    public ItemStack createIcon()
+    {
         return new ItemStack(this.icon);
     }
-
+    
 }

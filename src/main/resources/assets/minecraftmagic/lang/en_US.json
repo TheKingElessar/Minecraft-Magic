@@ -1,5 +1,8 @@
 {
   "itemGroup.ModItemGroup": "Magic",
   "item.minecraftmagic.moditem": "Test Item",
-  "item.minecraftmagic.conjurefang": "Spell Conjure Fang"
+  "item.minecraftmagic.conjurefang": "Spell Conjure Fang",
+  "item.minecraftmagic.conjurefangrow": "Spell Conjure Fang Row",
+  "item.minecraftmagic.conjurefangcircle": "Spell Conjure Fang Circle",
+  "entity.minecraftmagic.evokerfangsrotatable": "Rotatable Evoker Fangs"
 }
