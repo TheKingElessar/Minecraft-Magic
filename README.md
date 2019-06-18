@@ -49,8 +49,19 @@ How a spell is structured:
   - Packets should include information sent from the client-side to the server-side. It will most commonly contain information on the spell's target. Sometimes no information is needed; however, packets should still be used to keep the regular structure between all spells and to more easily be updated and changed in the furture.
   - The server should, on a separate network thread, call the spell's `castServer` method using information contained in the packet.
 
+## A note on updating
+This is currently updated to 1.13.2. At the moment, Forge 1.14.2 is not far enough along for me to want to update, but I expect in the next couple of weeks I will be able to.
+
+## Versions
+Current Version: Beta 0.2.
+
+Released: 06/18/2019
+
+[Changelog](CHANGELOG.md)
+
+## Resources
 For information on using GitHub and Git, see [here](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners).
 
 For information on GitHub formatting, see [here](https://help.github.com/en/articles/basic-writing-and-formatting-syntax).
 
-For a simple online tool to make textures, see [here](https://www.pixilart.com/draw).
+For a simple online tool to make pixel textures, see [here](https://www.pixilart.com/draw).
