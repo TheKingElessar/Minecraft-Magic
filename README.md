@@ -1,4 +1,4 @@
-# Introduction
+# Minecraft Magic
 Minecraft Magic hopes to add a magic system that allows the player to interact with the environment.
 
 ## Spells
@@ -31,7 +31,20 @@ Only one entity is currently used:
 - Evoker Fangs Rotatable
   - This is exactly like the vanilla Evoker Fangs entity; however, having a custom rendering class allows rotation to be more easily done. In the future this entity will probably be removed and the vanilla entity, with added Capabilities, will be used.
 
-## Adding Spells
+## A note on updating
+This is currently updated to 1.13.2. At the moment, Forge 1.14.2 is not far enough along for me to want to update, but I expect in the next couple of weeks I will be able to.
+
+## Versions
+Current Version: Beta 0.2.
+
+Released: 06/18/2019
+
+[Changelog](CHANGELOG.md)
+
+#Developer Resources
+At the moment there is no API for adding new or using existing spells (such as having mobs in another mod cast spells), but in the future I hope to add one.
+
+## Spell Structure
 How a spell is structured:
 - Item Class
   - When right clicked, the spell's constructor should be called.
@@ -48,16 +61,6 @@ How a spell is structured:
 - Packet Class
   - Packets should include information sent from the client-side to the server-side. It will most commonly contain information on the spell's target. Sometimes no information is needed; however, packets should still be used to keep the regular structure between all spells and to more easily be updated and changed in the furture.
   - The server should, on a separate network thread, call the spell's `castServer` method using information contained in the packet.
-
-## A note on updating
-This is currently updated to 1.13.2. At the moment, Forge 1.14.2 is not far enough along for me to want to update, but I expect in the next couple of weeks I will be able to.
-
-## Versions
-Current Version: Beta 0.2.
-
-Released: 06/18/2019
-
-[Changelog](CHANGELOG.md)
 
 ## Resources
 For information on using GitHub and Git, see [here](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners).
