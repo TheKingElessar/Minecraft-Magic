@@ -1,72 +1,72 @@
 package com.thekingelessar.minecraftmagic.common.network.packets;
 
+import com.thekingelessar.minecraftmagic.common.spell.conjuration.conjurefang.SpellConjureFangRow;
+import com.thekingelessar.minecraftmagic.common.spell.target.TargetBlock;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayerMP;
-import net.minecraft.entity.projectile.EntityEvokerFangs;
 import net.minecraft.network.PacketBuffer;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.network.NetworkEvent;
 
 import java.util.function.Supplier;
 
-public class PacketConjureFang
+public class PacketConjureFangRow
 {
-
+    
     private final double x;
     private final double y;
     private final double z;
-    private final float pitch;
-    private final float yaw;
-
-    public PacketConjureFang(double x, double y, double z, float pitch, float yaw)
+    
+    private Entity caster;
+    
+    public PacketConjureFangRow(double x, double y, double z)
     {
         this.x = x;
         this.y = y;
         this.z = z;
-        this.pitch = pitch;
-        this.yaw = yaw;
     }
-
-    public static void encode(PacketConjureFang msg, PacketBuffer buf)
+    
+    public static void encode(PacketConjureFangRow msg, PacketBuffer buf)
     {
         buf.writeDouble(msg.x);
         buf.writeDouble(msg.y);
         buf.writeDouble(msg.z);
-        buf.writeFloat(msg.pitch);
-        buf.writeFloat(msg.yaw);
-
+        
     }
-
-    public static PacketConjureFang decode(PacketBuffer buf)
+    
+    public static PacketConjureFangRow decode(PacketBuffer buf)
     {
         double x = buf.readDouble();
         double y = buf.readDouble();
         double z = buf.readDouble();
-        float pitch = buf.readFloat();
-        float yaw = buf.readFloat();
-
-        return new PacketConjureFang(x, y, z, pitch, yaw);
+        
+        return new PacketConjureFangRow(x, y, z);
     }
-
+    
     public static class Handler
     {
-        public static void handle(final PacketConjureFang message, Supplier<NetworkEvent.Context> ctx)
+        public static void handle(final PacketConjureFangRow message, Supplier<NetworkEvent.Context> ctx)
         {
-            ctx.get().enqueueWork(() -> {
+            ctx.get().enqueueWork(() ->
+            {
                 // Work that needs to be threadsafe (most work)
                 EntityPlayerMP sender = ctx.get().getSender();
                 World senderWorld = sender.world;
-                EntityEvokerFangs toSpawn = new EntityEvokerFangs(senderWorld);
-
-                toSpawn.setPosition(message.x, message.y, message.z);
-                toSpawn.rotationPitch = message.pitch;
-                System.out.println("Pitch: " + toSpawn.rotationPitch);
-                toSpawn.rotationYaw = message.yaw;
-                System.out.println("Yaw: " + toSpawn.rotationYaw);
-                senderWorld.spawnEntity(toSpawn);
+                
+                message.caster = sender;
+                
+                message.castSpell(message.caster, message);
+                
             });
-
+            
             ctx.get().setPacketHandled(true);
         }
     }
-
+    
+    private void castSpell(Entity caster, PacketConjureFangRow message)
+    {
+        TargetBlock targetBlock = new TargetBlock(message.x, message.y, message.z, null);
+        SpellConjureFangRow.castServer(caster, targetBlock);
+    }
+    
 }

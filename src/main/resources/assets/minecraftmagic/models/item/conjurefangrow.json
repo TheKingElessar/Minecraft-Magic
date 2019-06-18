@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "minecraftmagic:item/spell/conjurefang"
+    "layer0": "minecraftmagic:item/spell/conjurefangrow"
   }
 }
