@@ -11,7 +11,7 @@ public class LogColors
     public static final String PURPLE = "\u001B[35m";
     public static final String CYAN = "\u001B[36m";
     public static final String WHITE = "\u001B[37m";
-
+    
     public static final String BLACK_BB = "\u001B[40m";
     public static final String RED_BB = "\u001B[41m";
     public static final String GREEN_BB = "\u001B[42m";
@@ -20,10 +20,10 @@ public class LogColors
     public static final String PURPLE_BB = "\u001B[45m";
     public static final String CYAN_BB = "\u001B[46m";
     public static final String WHITE_BB = "\u001B[47m";
-
+    
     public static final String LOG_INFO = BLUE_BB + WHITE;
     public static final String LOG_WARNING = RED_BB + WHITE;
-
+    
     public enum LogLevels
     {
         WARNING, // Bad stuff, use red background, white text
