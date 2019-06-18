@@ -1,34 +1,34 @@
-#Introduction
+# Introduction
 Minecraft Magic hopes to add a magic system that allows the player to interact with the environment.
 
-##Spells
+## Spells
 There are 3 spells available. Spells are organized into one of 8 schools of magic.
 - Conjuration
   - Conjure Fang
   - Conjure Fang Row
   - Conjure Fang Circle
 
-###Conjure Fang
+### Conjure Fang
 Range: 20 blocks
 Summons a single fang where the caster is targeting.
 
-###Conjure Fang Row
+### Conjure Fang Row
 Range: 10 blocks
 Summons a row of fangs originating at the caster and extending to the range. In total, 8 fangs are summoned.
 
-###Conjure Fang Circle
+### Conjure Fang Circle
 Range: Self
 Summons two rings of fangs surrounding the caster. The first ring contains 5 fangs and is summoned 1.5 blocks away from the caster. The second ring contains 8 fangs and is summoned 2.5 blocks away from the caster.
 
-##Items
+## Items
 Each spell has a corresponding item that is used to cast the spell. Right clicking while holding the spell's item will cast it.
 
-##Entities
+## Entities
 Only one entity is currently used:
 - Evoker Fangs Rotatable
   - This is exactly like the vanilla Evoker Fangs entity; however, having a custom rendering class allows rotation to be more easily done. In the future this entity will probably be removed and the vanilla entity, with added Capabilities, will be used.
 
-##Adding Spells
+## Adding Spells
 How a spell is structured:
 - Item Class
   - When right clicked, the spell's constructor should be called.
