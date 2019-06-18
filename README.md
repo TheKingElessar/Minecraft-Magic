@@ -10,14 +10,17 @@ There are 3 spells available. Spells are organized into one of 8 schools of magi
 
 ### Conjure Fang
 Range: 20 blocks
+
 Summons a single fang where the caster is targeting.
 
 ### Conjure Fang Row
 Range: 10 blocks
+
 Summons a row of fangs originating at the caster and extending to the range. In total, 8 fangs are summoned.
 
 ### Conjure Fang Circle
 Range: Self
+
 Summons two rings of fangs surrounding the caster. The first ring contains 5 fangs and is summoned 1.5 blocks away from the caster. The second ring contains 8 fangs and is summoned 2.5 blocks away from the caster.
 
 ## Items
@@ -47,5 +50,7 @@ How a spell is structured:
   - The server should, on a separate network thread, call the spell's `castServer` method using information contained in the packet.
 
 For information on using GitHub and Git, see [here](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners).
+
 For information on GitHub formatting, see [here](https://help.github.com/en/articles/basic-writing-and-formatting-syntax).
+
 For a simple online tool to make textures, see [here](https://www.pixilart.com/draw).
