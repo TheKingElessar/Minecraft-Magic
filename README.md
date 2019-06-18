@@ -41,7 +41,7 @@ Released: 06/18/2019
 
 [Changelog](CHANGELOG.md)
 
-#Developer Resources
+# Developer Resources
 At the moment there is no API for adding new or using existing spells (such as having mobs in another mod cast spells), but in the future I hope to add one.
 
 ## Spell Structure
