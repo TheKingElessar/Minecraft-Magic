@@ -10,38 +10,45 @@ import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.world.World;
 
-public class ItemConjureFang extends Item {
-
-    public ItemConjureFang() {
+public class ItemConjureFang extends Item
+{
+    
+    public ItemConjureFang()
+    {
         super(new Properties().group(ItemGroupInit.modItemGroup));
     }
-
+    
     @Override
-    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
-        if(!worldIn.isRemote) {
+    public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn)
+    {
+        if (!worldIn.isRemote)
+        {
             ItemStack itemstack = playerIn.getHeldItem(handIn); // Shield function
             playerIn.setActiveHand(handIn); // Shield function
-
+            
             return new ActionResult<>(EnumActionResult.SUCCESS, itemstack); // Shield function
-
-        } else {
-
+        }
+        else
+        {
             SpellConjureFang spellConjureFang = new SpellConjureFang(playerIn);
-
-            if(spellConjureFang.target != null) {
-                spellConjureFang.cast();
-
+            
+            if (spellConjureFang.target != null)
+            {
+                spellConjureFang.castClient();
+                
                 ItemStack itemstack = playerIn.getHeldItem(handIn); // Shield function
                 playerIn.setActiveHand(handIn); // Shield function
-
+                
                 return new ActionResult<>(EnumActionResult.SUCCESS, itemstack); // Shield function
-
-            } else {
+                
+            }
+            else
+            {
                 ItemStack itemstack = playerIn.getHeldItem(handIn); // Shield function
                 playerIn.setActiveHand(handIn); // Shield function
                 return new ActionResult<>(EnumActionResult.PASS, itemstack); // Shield function
             }
         }
     }
-
+    
 }
