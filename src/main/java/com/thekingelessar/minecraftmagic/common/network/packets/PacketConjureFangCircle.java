@@ -1,67 +1,40 @@
 package com.thekingelessar.minecraftmagic.common.network.packets;
 
-import com.thekingelessar.minecraftmagic.common.spell.conjuration.conjurefang.SpellConjureFang;
-import com.thekingelessar.minecraftmagic.common.spell.target.TargetBlock;
+import com.thekingelessar.minecraftmagic.common.spell.conjuration.conjurefang.SpellConjureFangCircle;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.network.PacketBuffer;
 import net.minecraftforge.fml.network.NetworkEvent;
 
-import java.util.UUID;
 import java.util.function.Supplier;
 
-public class PacketConjureFang
+public class PacketConjureFangCircle
 {
     
-    public static UUID uuid;
-    private final double x;
-    private final double y;
-    private final double z;
-    private final String blockSide;
-    
-    public PacketConjureFang(double x, double y, double z, String blockSide)
+    public PacketConjureFangCircle()
     {
-        this.x = x;
-        this.y = y;
-        this.z = z;
-        this.blockSide = blockSide;
     }
     
-    public static void encode(PacketConjureFang msg, PacketBuffer buf)
+    public static void encode(PacketConjureFangCircle msg, PacketBuffer buf)
     {
-        buf.writeDouble(msg.x);
-        buf.writeDouble(msg.y);
-        buf.writeDouble(msg.z);
-        buf.writeString(msg.blockSide);
-        
     }
     
-    public static PacketConjureFang decode(PacketBuffer buf)
+    public static PacketConjureFangCircle decode(PacketBuffer buf)
     {
-        double x = buf.readDouble();
-        double y = buf.readDouble();
-        double z = buf.readDouble();
-        String blockSide = buf.readString(8);
         
-        return new PacketConjureFang(x, y, z, blockSide);
+        return new PacketConjureFangCircle();
     }
     
     public static class Handler
     {
-        public static void handle(final PacketConjureFang message, Supplier<NetworkEvent.Context> ctx)
+        public static void handle(final PacketConjureFangCircle message, Supplier<NetworkEvent.Context> ctx)
         {
             ctx.get().enqueueWork(() ->
             {
                 // Work that needs to be threadsafe (most work)
-                EntityPlayerMP sender = ctx.get().getSender(); // TODO: Make this so it doesn't have to be a player, for example make a spawning class that takes the parameters from the message
-                TargetBlock target = new TargetBlock(message.x, message.y, message.z, message.blockSide);
+                EntityPlayerMP sender = ctx.get().getSender();
                 
-                SpellConjureFang.castServer(sender, target);
+                SpellConjureFangCircle.castServer(sender);
 
-                /* TODO: follow this model for future spells. When cast, the client should gather the needed data (most likely the target),
-                    then send it to the server in packets. The packets should be unwrapped and the data inside should be used to finish the
-                    casting on the server.
-                    Update the README to reflect this and provide instructions!
-                 */
             });
             
             ctx.get().setPacketHandled(true);
