@@ -15,7 +15,7 @@ public class ItemConjureFang extends Item
     
     public ItemConjureFang()
     {
-        super(new Properties().group(ItemGroupInit.modItemGroup));
+        super(new Properties().group(ItemGroupInit.itemGroupMagic));
     }
     
     @Override

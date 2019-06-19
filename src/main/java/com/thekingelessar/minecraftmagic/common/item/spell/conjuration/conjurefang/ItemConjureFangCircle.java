@@ -15,7 +15,7 @@ public class ItemConjureFangCircle extends Item
     
     public ItemConjureFangCircle()
     {
-        super(new Properties().group(ItemGroupInit.modItemGroup));
+        super(new Properties().group(ItemGroupInit.itemGroupMagic));
     }
     
     @Override

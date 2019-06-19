@@ -14,7 +14,7 @@ public class ItemModItem extends Item
     
     public ItemModItem()
     {
-        super(new Properties().group(ItemGroupInit.modItemGroup));
+        super(new Properties().group(ItemGroupInit.itemGroupMagic));
     }
     
     @Override

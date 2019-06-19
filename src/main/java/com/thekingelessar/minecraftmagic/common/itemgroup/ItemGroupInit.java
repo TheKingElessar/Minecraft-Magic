@@ -5,6 +5,6 @@ import com.thekingelessar.minecraftmagic.common.item.ModItems;
 public class ItemGroupInit
 {
     
-    public static final ModItemGroup modItemGroup = new ModItemGroup("ModItemGroup", () -> (ModItems.MODITEM));
+    public static final ModItemGroup itemGroupMagic = new ModItemGroup("itemgroupmagic", () -> (ModItems.CONJUREFANGROW));
     
 }
