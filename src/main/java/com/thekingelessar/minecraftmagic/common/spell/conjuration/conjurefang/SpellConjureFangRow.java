@@ -46,7 +46,6 @@ public class SpellConjureFangRow extends Castable
         }
         else
         {
-            System.out.println("Result is air");
             RayTraceResult result = extendedRange.mcObjectMouseOver;
             
             if (result != null)
@@ -59,20 +58,17 @@ public class SpellConjureFangRow extends Castable
                 Double blockZ = lookingAt.z;
                 
                 BlockPos originalBlockPos = new BlockPos(blockX, blockY, blockZ);
-                System.out.println("Original: " + blockX + " " + blockY + " " + blockZ);
                 
                 BlockPos newBlockPos = originalBlockPos.down();
                 IBlockState ibs;
                 
                 while (true)
                 {
-                    System.out.println("Testing: " + newBlockPos.getX() + " " + newBlockPos.getY() + " " + newBlockPos.getZ());
                     
                     ibs = caster.world.getBlockState(newBlockPos);
                     if (!(ibs.isAir(caster.world, newBlockPos)))
                     {
                         blockY = (Double) (double) newBlockPos.getY();
-                        System.out.println("Found: " + blockX + " " + blockY + " " + blockZ);
                         break;
                     }
                     newBlockPos = newBlockPos.down();
