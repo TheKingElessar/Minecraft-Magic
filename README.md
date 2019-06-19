@@ -4,9 +4,9 @@ Minecraft Magic hopes to add a magic system that allows the player to interact w
 This page is acting as the wiki until the mod has enough content to need a separate one!
 
 ## Files
-You can download the project [here](https://drive.google.com/drive/folders/1RIOAiazqJ_hO3P8sGhc0RdX-9NI7clCt?usp=sharing). It will not be available on CurseForge until it is fully released!
+You can download the project in the ["Releases" tab](https://github.com/TheKingElessar/Minecraft-Magic/releases) on the GitHub project page. It will not be available on CurseForge until it is fully released.
 
-**Naming convention:** `Minecraft Magic-[mod version]-[Minecraft version].jar`
+**Naming convention:** `Minecraft_Magic_[mod version]_[Minecraft version].jar`
 
 ## Spells
 There are 3 spells available. Spells are organized into one of 8 schools of magic.
