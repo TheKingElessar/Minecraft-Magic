@@ -14,8 +14,8 @@ apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
 version = '0.2'
-group = 'com.thekingelessar.minecraftmagic' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = 'minecraftmagic'
+group = 'com.thekingelessar' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = 'Minecraft Magic'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 
