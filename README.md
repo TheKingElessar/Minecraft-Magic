@@ -46,7 +46,7 @@ Only one entity is currently used:
 This is currently updated to 1.13.2. At the moment, Forge 1.14.2 is not far enough along for me to want to update, but I expect in the next couple of weeks I will be able to.
 
 ## Versions
-Current Version: Beta 0.2.
+Current Version: v0.2-alpha.
 
 Released: 06/18/2019
 
