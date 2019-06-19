@@ -13,7 +13,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = 'v0.2-beta'
+version = 'v0.2-beta_1.13.2'
 group = 'com.thekingelessar' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'Minecraft_Magic'
 
