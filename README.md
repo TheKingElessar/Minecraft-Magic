@@ -1,5 +1,12 @@
 # Minecraft Magic
-Minecraft Magic hopes to add a magic system that allows the player to interact with the environment.
+Minecraft Magic hopes to add a magic system that allows the player to interact with the environment. It runs on [Minecraft Forge](https://files.minecraftforge.net/maven/net/minecraftforge/forge/index_1.13.2.html).
+
+This page is acting as the wiki until the mod has enough content to need a separate one!
+
+## Files
+You can download the project [here](https://drive.google.com/drive/folders/1RIOAiazqJ_hO3P8sGhc0RdX-9NI7clCt?usp=sharing). It will not be available on CurseForge until it is fully released!
+
+**Naming convention:** `Minecraft Magic-[mod version]-[Minecraft version].jar`
 
 ## Spells
 There are 3 spells available. Spells are organized into one of 8 schools of magic.
@@ -9,17 +16,21 @@ There are 3 spells available. Spells are organized into one of 8 schools of magi
   - Conjure Fang Circle
 
 ### Conjure Fang
-Range: 20 blocks
+**Range:** 20 blocks
+
+**Target:** Block or Entity
 
 Summons a single fang where the caster is targeting.
 
 ### Conjure Fang Row
-Range: 10 blocks
+**Range:** 10 blocks
+
+**Target:** Direction
 
 Summons a row of fangs originating at the caster and extending to the range. In total, 8 fangs are summoned.
 
 ### Conjure Fang Circle
-Range: Self
+**Range:** Self
 
 Summons two rings of fangs surrounding the caster. The first ring contains 5 fangs and is summoned 1.5 blocks away from the caster. The second ring contains 8 fangs and is summoned 2.5 blocks away from the caster.
 
@@ -31,7 +42,7 @@ Only one entity is currently used:
 - Evoker Fangs Rotatable
   - This is exactly like the vanilla Evoker Fangs entity; however, having a custom rendering class allows rotation to be more easily done. In the future this entity will probably be removed and the vanilla entity, with added Capabilities, will be used.
 
-## A note on updating
+## A note on 1.14.2
 This is currently updated to 1.13.2. At the moment, Forge 1.14.2 is not far enough along for me to want to update, but I expect in the next couple of weeks I will be able to.
 
 ## Versions
@@ -41,7 +52,7 @@ Released: 06/18/2019
 
 [Changelog](CHANGELOG.md)
 
-# Developer Resources
+# Developer Info
 At the moment there is no API for adding new or using existing spells (such as having mobs in another mod cast spells), but in the future I hope to add one.
 
 ## Spell Structure
