@@ -21,7 +21,12 @@ public class PacketConjureFang
         this.x = x;
         this.y = y;
         this.z = z;
-        this.blockSide = blockSide;
+        if (blockSide != null)
+        {
+            this.blockSide = blockSide;
+        } else {
+            this.blockSide = "null";
+        }
     }
     
     public static void encode(PacketConjureFang msg, PacketBuffer buf)
