@@ -2,9 +2,10 @@ package com.thekingelessar.minecraftmagic.common.register;
 
 import com.thekingelessar.minecraftmagic.MinecraftMagic;
 import com.thekingelessar.minecraftmagic.common.item.ItemModItem;
-import com.thekingelessar.minecraftmagic.common.item.spell.conjuration.conjurefang.ItemConjureFang;
-import com.thekingelessar.minecraftmagic.common.item.spell.conjuration.conjurefang.ItemConjureFangCircle;
-import com.thekingelessar.minecraftmagic.common.item.spell.conjuration.conjurefang.ItemConjureFangRow;
+import com.thekingelessar.minecraftmagic.common.item.spell.conjuration.ItemConjureFang;
+import com.thekingelessar.minecraftmagic.common.item.spell.conjuration.ItemConjureFangCircle;
+import com.thekingelessar.minecraftmagic.common.item.spell.conjuration.ItemConjureFangRow;
+import com.thekingelessar.minecraftmagic.common.item.spell.evocation.ItemFirebolt;
 import net.minecraft.item.Item;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -35,7 +36,12 @@ public class RegisterItem
         ItemConjureFangCircle conjurefangcircle = new ItemConjureFangCircle();
         conjurefangcircle.setRegistryName(MinecraftMagic.modid, "conjurefangcircle");
         registry.register(conjurefangcircle);
-        
+    
+        ItemFirebolt firebolt = new ItemFirebolt();
+        firebolt.setRegistryName(MinecraftMagic.modid, "firebolt");
+        registry.register(firebolt);
+    
+    
     }
     
 }

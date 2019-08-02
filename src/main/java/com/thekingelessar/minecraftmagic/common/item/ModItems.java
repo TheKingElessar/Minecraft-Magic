@@ -11,4 +11,5 @@ public class ModItems
     public static final Item CONJUREFANG = null;
     public static final Item CONJUREFANGROW = null;
     public static final Item CONJUREFANGCIRCLE = null;
+    public static final Item FIREBOLT = null;
 }

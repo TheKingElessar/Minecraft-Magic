@@ -3,10 +3,11 @@ package com.thekingelessar.minecraftmagic;
 import com.thekingelessar.minecraftmagic.client.ClientProxy;
 import com.thekingelessar.minecraftmagic.common.ServerProxy;
 import com.thekingelessar.minecraftmagic.common.network.MinecraftMagicPacketHandler;
-import com.thekingelessar.minecraftmagic.common.network.packets.PacketConjureFang;
-import com.thekingelessar.minecraftmagic.common.network.packets.PacketConjureFangCircle;
-import com.thekingelessar.minecraftmagic.common.network.packets.PacketConjureFangRow;
+import com.thekingelessar.minecraftmagic.common.network.packets.spells.conjuration.PacketConjureFang;
+import com.thekingelessar.minecraftmagic.common.network.packets.spells.conjuration.PacketConjureFangCircle;
+import com.thekingelessar.minecraftmagic.common.network.packets.spells.conjuration.PacketConjureFangRow;
 import com.thekingelessar.minecraftmagic.common.network.packets.PacketGlowSingleEntity;
+import com.thekingelessar.minecraftmagic.common.network.packets.spells.evocation.PacketFirebolt;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -64,6 +65,14 @@ public class MinecraftMagic
                 PacketConjureFangCircle.Handler::handle
         );
         
+        MinecraftMagicPacketHandler.INSTANCE.registerMessage(
+                MinecraftMagicPacketHandler.increaseId(),
+                PacketFirebolt.class,
+                PacketFirebolt::encode,
+                PacketFirebolt::decode,
+                PacketFirebolt.Handler::handle
+        );
+    
     }
     
     private void preInit(final FMLCommonSetupEvent event)

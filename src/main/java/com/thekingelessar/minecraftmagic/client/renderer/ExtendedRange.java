@@ -6,24 +6,21 @@ import net.minecraft.entity.Entity;
 import net.minecraft.util.EntitySelectors;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.math.*;
-import net.minecraft.world.chunk.IChunkProvider;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
 public class ExtendedRange
 {
-    
     private Minecraft mc;
     public RayTraceResult mcObjectMouseOver;
+    public BlockPos blockHit;
     private final double range;
     private final RayTraceFluidMode fluidMode;
     private final Entity requestingEntity;
     private Float partialTicks;
     public boolean airTargeted;
     public EnumFacing blockSideHit;
-    
-    private IChunkProvider chunkProvider;
     
     public ExtendedRange(@Nullable Float partialTicks, double range, RayTraceFluidMode fluidMode, Minecraft mc, Entity entity)
     {
@@ -53,6 +50,7 @@ public class ExtendedRange
                 this.blockSideHit = mcObjectMouseOver.sideHit;
                 
                 this.airTargeted = state.isAir(mc.world, blockPos);
+                this.blockHit = blockPos;
                 
                 Vec3d vec3d = requestingEntity.getEyePosition(partialTicks);
                 boolean flag = false;
