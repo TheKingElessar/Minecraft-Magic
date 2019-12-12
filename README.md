@@ -14,6 +14,8 @@ There are 3 spells available. Spells are organized into one of 8 schools of magi
   - Conjure Fang
   - Conjure Fang Row
   - Conjure Fang Circle
+  
+The "Needed information" section under each spell is for my use. It tells what data the server needs from the caster to cast the spell.
 
 ### Conjure Fang
 **Range:** 20 blocks
@@ -22,6 +24,11 @@ There are 3 spells available. Spells are organized into one of 8 schools of magi
 
 Summons a single fang where the caster is targeting.
 
+**Needed information:**
+* Target coordinates
+* Caster
+* Caster rotation
+
 ### Conjure Fang Row
 **Range:** 10 blocks
 
@@ -29,10 +36,19 @@ Summons a single fang where the caster is targeting.
 
 Summons a row of fangs originating at the caster and extending to the range. In total, 8 fangs are summoned.
 
+**Needed information:**
+* Caster
+* Caster location
+* Caster rotation
+
 ### Conjure Fang Circle
 **Range:** Self
 
 Summons two rings of fangs surrounding the caster. The first ring contains 5 fangs and is summoned 1.5 blocks away from the caster. The second ring contains 8 fangs and is summoned 2.5 blocks away from the caster.
+
+**Needed information:**
+* Caster
+* Caster location
 
 ## Items
 Each spell has a corresponding item that is used to cast the spell. Right clicking while holding the spell's item will cast it.
