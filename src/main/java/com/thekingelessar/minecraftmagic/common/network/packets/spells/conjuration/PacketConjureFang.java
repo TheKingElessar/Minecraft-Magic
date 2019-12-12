@@ -65,3 +65,4 @@ public class PacketConjureFang
     }
     
 }
+// TODO: Use the "needed information" in README.md to start redoing the packet structure! You got this! You are the best person in the world for this job! Yeah, Nathan!
